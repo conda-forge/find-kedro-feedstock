@@ -1,5 +1,5 @@
 {% set name = "find-kedro" %}
-{% set version = "0.0.5" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6d1d6c9e7baf5ddf190c1ff34b5a95a5f3eea2cdd0f8999fe452bb0dfea8f460
+  sha256: 2f722d5c3b1b4a11ef736c1932c8b07278a849a3e81e6343ccf0c9ef4654f28d
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
   entry_points:
     - find-kedro = find_kedro.cli:cli
@@ -38,7 +38,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'https://github.com/WaylonWalker/find-kedro'
+  summary: https://github.com/WaylonWalker/find-kedro
 
   description: |
     find-kedro is a small library to enhance your kedro experience. It looks through your modules to find kedro pipelines,
