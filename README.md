@@ -5,9 +5,13 @@ Home: https://github.com/WaylonWalker/find-kedro
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/find-kedro-feedstock/blob/master/LICENSE.txt)
 
 Summary: https://github.com/WaylonWalker/find-kedro
+
+Development: https://github.com/WaylonWalker/find-kedro
+
+Documentation: https://find-kedro.waylonwalker.com/
 
 find-kedro is a small library to enhance your kedro experience. It looks through your modules to find kedro pipelines,
 nodes, and iterables (lists, sets, tuples) of nodes. It then assembles them into a dictionary of pipelines, each module
@@ -112,9 +116,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
