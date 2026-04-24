@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 2f722d5c3b1b4a11ef736c1932c8b07278a849a3e81e6343ccf0c9ef4654f28d
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
   entry_points:
@@ -18,16 +18,18 @@ build:
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
   run:
-    - python
+    - python >={{ python_min }}
     - kedro
     - click
     - colorama
     - pygments
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - find_kedro
   commands:
